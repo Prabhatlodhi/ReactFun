@@ -1,14 +1,19 @@
-import { useState } from "react";
 import "./App.css";
-import AdvHooks from "./components/AdvHooks";
-// import BasicHooks from "./components/BasicHooks";
+// import ThemeComponent from "./components/ThemeComponent";
+import { ThemeProvider } from "./context/ThemeContext";
+// import WithoutReducer from "./components/WithoutReducer";
+import ContextProvider from "./context/ContextProvider";
+import TestReducer from "./components/TestReducer";
 
 function App() {
   return (
-    <div>
-      {/* <BasicHooks /> */}
-      <AdvHooks />
-    </div>
+    <ContextProvider>
+      <ThemeProvider>
+        {/* <ThemeComponent />
+        <WithoutReducer /> */}
+        <TestReducer/>
+      </ThemeProvider>
+    </ContextProvider>
   );
 }
 
