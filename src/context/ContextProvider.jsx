@@ -5,13 +5,11 @@ const initialState = {
   toggleComponent: false,
 };
 
-
 const Context = createContext(initialState);
 
 export const useValue = ()=>{
     return useContext(Context)
 }
-
 
 const ContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
