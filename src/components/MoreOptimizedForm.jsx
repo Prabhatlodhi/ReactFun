@@ -8,8 +8,8 @@ const MoreOptimizedForm = () => {
     password: "",
   });
 
-  const handleChange = (e) => {
-    setUserData({ ...userData, [e.target.name]: e.target.value });
+  const handleChange = (event) => {
+    setUserData({ ...userData, [event.target.name]: event.target.value });
   };
 
   const handleSubmit = (e) => {

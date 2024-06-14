@@ -1,20 +1,22 @@
-import "./App.css"; 
-import MoreOptimizedForm from "./components/MoreOptimizedForm";
-
+import "./App.css";
+import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import ContactUs from "./pages/ContactUs";
+import Navbar from "./components/Navbar";
+import RandomPage from "./pages/RandomPage";
 
 function App() {
   return (
-    <>
-   
-      <MoreOptimizedForm/>
-    </>
-    // <ContextProvider>
-    //   <ThemeProvider>
-    //     <ThemeComponent />
-    //     <WithoutReducer />
-    //     <TestReducer/>
-    //   </ThemeProvider>
-    // </ContextProvider>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/contact" element={<ContactUs />}></Route> 
+        <Route path="/randomPage" element={<RandomPage />}></Route> 
+      </Routes> 
+    </Router>
   );
 }
 
